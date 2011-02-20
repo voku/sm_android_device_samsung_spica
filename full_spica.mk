@@ -126,6 +126,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/samdroidtools/libsamdroidtools.so:system/lib/libsamdroidtools.so
 
 #
+# RockPlayer for temporary DivX
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/spica/prebuilt/spica/rockplayer/rockplayer.apk:system/app/rockplayer.apk
+
+#
 # serviceModeApp
 #
 PRODUCT_COPY_FILES += \

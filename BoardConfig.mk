@@ -63,7 +63,7 @@ WIFI_DRIVER_MODULE_NAME     := "dhd"
 
 BOARD_HAVE_BLUETOOTH     := true
 BOARD_HAVE_BLUETOOTH_BCM := true
-BOARD_HAVE_FM_RADIO      := true
+BOARD_HAVE_FM_RADIO      := false
 
 BOARD_GPS_LIBRARIES := libsecgps libsecril-client
 

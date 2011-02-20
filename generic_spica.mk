@@ -1,6 +1,6 @@
 # Generic leshakmod product
-PRODUCT_NAME := CyanogenMod
-PRODUCT_BRAND := criminal
+PRODUCT_NAME := SpicagenMod
+PRODUCT_BRAND := cadavre
 PRODUCT_DEVICE := generic
 
 # Use edify for otapackage
@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
     dalvik.vm.dexopt-data-only=1 \
-    dalvik.vm.heapsize=30m
+    dalvik.vm.heapsize=32m
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -43,10 +43,10 @@ PRODUCT_PACKAGES += \
     ADWLauncher \
     CMParts \
     CMPartsHelper \
-    CMStats \
-    CMUpdateNotify \
-    CMWallpapers \
-    FileManager \
+#    CMStats \
+#    CMUpdateNotify \
+#    CMWallpapers \
+#    FileManager \
     Stk \
     Superuser
 
@@ -57,14 +57,14 @@ endif
 
 # Live wallpaper packages
 PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
+#    LiveWallpapers \
+#    LiveWallpapersPicker \
+#    MagicSmokeWallpapers \
     librs_jni
 
 # Publish that we support the live wallpaper feature.
-PRODUCT_COPY_FILES += \
-    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
+#PRODUCT_COPY_FILES += \
+#    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # Common CM overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/spica/overlay/spica
@@ -99,8 +99,8 @@ SPICA_WITH_GOOGLE:=true
 ifdef SPICA_WITH_GOOGLE
 
     PRODUCT_COPY_FILES += \
-	vendor/spica/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
-	vendor/spica/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
+#	vendor/spica/proprietary/CarHomeGoogle.apk:system/app/CarHomeGoogle.apk \
+#	vendor/spica/proprietary/CarHomeLauncher.apk:system/app/CarHomeLauncher.apk \
 	vendor/spica/proprietary/com.google.android.maps.jar:system/framework/com.google.android.maps.jar \
 	vendor/spica/proprietary/com.google.android.maps.xml:system/etc/permissions/com.google.android.maps.xml \
 	vendor/spica/proprietary/Facebook.apk:system/app/Facebook.apk \
@@ -115,7 +115,7 @@ ifdef SPICA_WITH_GOOGLE
 	vendor/spica/proprietary/GoogleQuickSearchBox.apk:system/app/GoogleQuickSearchBox.apk \
 	vendor/spica/proprietary/GoogleServicesFramework.apk:system/app/GoogleServicesFramework.apk \
 	vendor/spica/proprietary/googlevoice.apk:system/app/googlevoice.apk \
-	vendor/spica/proprietary/HtcCopyright.apk:system/app/HtcCopyright.apk \
+#	vendor/spica/proprietary/HtcCopyright.apk:system/app/HtcCopyright.apk \
 	vendor/spica/proprietary/HtcEmailPolicy.apk:system/app/HtcEmailPolicy.apk \
 	vendor/spica/proprietary/HtcSettings.apk:system/app/HtcSettings.apk \
 	vendor/spica/proprietary/kickback.apk:system/app/kickback.apk \
@@ -147,9 +147,6 @@ endif
 # Copy over the changelog to the device
 PRODUCT_COPY_FILES += \
 	vendor/spica/CHANGELOG:system/etc/CHANGELOG.txt
-
-PRODUCT_COPY_FILES += \
-	vendor/cyanogen/CHANGELOG.mkdn:system/etc/CHANGELOG-CM.txt
 
 #
 # Copy bootanimation
