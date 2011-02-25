@@ -85,7 +85,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/hw/copybit.GT-I5700.so:system/lib/hw/copybit.GT-I5700.so
 
 #
-# akm daemon
+# akmd
 #
 PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/akmd/akmd:system/bin/akmd
@@ -104,7 +104,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/ril/efsd:system/bin/efsd \
     device/samsung/spica/prebuilt/spica/ril/rilclient-test:system/bin/rilclient-test \
     device/samsung/spica/prebuilt/spica/ril/libsec-ril.so:system/lib/libsec-ril.so
-#    device/samsung/spica/prebuilt/spica/ril/libsecril-client.so:system/lib/libsecril-client.so
 
 #
 # GSM APN list
@@ -129,7 +128,7 @@ PRODUCT_COPY_FILES += \
 # RockPlayer for temporary DivX
 #
 PRODUCT_COPY_FILES += \
-    device/samsung/spica/prebuilt/spica/rockplayer/rockplayer.apk:system/app/rockplayer.apk
+    device/samsung/spica/prebuilt/spica/rockplayer/RockPlayer.apk:system/app/RockPlayer.apk
 
 #
 # serviceModeApp
