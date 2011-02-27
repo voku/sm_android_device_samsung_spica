@@ -109,7 +109,7 @@ PRODUCT_COPY_FILES += \
 # GSM APN list
 #
 PRODUCT_COPY_FILES += \
-    device/samsung/spica/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/spica/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 #
 # Audio
@@ -156,4 +156,3 @@ PRODUCT_DEVICE := GT-I5700
 PRODUCT_MODEL := GT-I5700
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := Samsung
-
