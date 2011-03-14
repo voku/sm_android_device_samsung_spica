@@ -11,6 +11,10 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/spica/overlay
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160
 
+# Repeat ring tone on incoming calls
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.telephony.call_ring.multiple=false
+
 #
 # GPS config & application from sucka
 #
@@ -30,10 +34,6 @@ PRODUCT_COPY_FILES += \
 # media config xml file
 PRODUCT_COPY_FILES += \
     device/samsung/spica/media_profiles.xml:system/etc/media_profiles.xml
-
-#
-# Copy spica specific prebuilt files
-#
 
 #
 # Wifi
@@ -69,6 +69,29 @@ PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/fimg-libs/libEGL_fimg.so:system/lib/egl/libEGL_fimg.so \
     device/samsung/spica/prebuilt/spica/fimg-libs/libGLESv1_CM_fimg.so:system/lib/egl/libGLESv1_CM_fimg.so \
     device/samsung/spica/prebuilt/spica/fimg-libs/libGLESv2_fimg.so:system/lib/egl/libGLESv2_fimg.so
+
+#
+# 3D GFX
+#
+ifdef SPICA_WITH_3D
+PRODUCT_COPY_FILES += \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_download.so:system/lib/libopencore_download.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_downloadreg.so:system/lib/libopencore_downloadreg.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_mp4local.so:system/lib/libopencore_mp4local.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_mp4localreg.so:system/lib/libopencore_mp4localreg.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_player.so:system/lib/libopencore_player.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_rtsp.so:system/lib/libopencore_rtsp.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libopencore_rtspreg.so:system/lib/libopencore_rtspreg.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libskia.so:system/lib/libskia.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libskiagl.so:system/lib/libskiagl.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libstagefright_color_conversion.so:system/lib/libstagefright_color_conversion.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libsurfaceflinger.so:system/lib/libsurfaceflinger.so \
+    device/samsung/spica/prebuilt/spica/3dpack/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
+    device/samsung/spica/prebuilt/spica/3dpack/egl/libChunkAlloc.so:system/lib/egl/libChunkAlloc.so \
+    device/samsung/spica/prebuilt/spica/3dpack/egl/libEGL_fimg.so:system/lib/egl/libEGL_fimg.so \
+    device/samsung/spica/prebuilt/spica/3dpack/egl/libGLESv1_CM_fimg.so:system/lib/egl/libGLESv1_CM_fimg.so \
+    device/samsung/spica/prebuilt/spica/3dpack/egl/libGLESv2_fimg.so:system/lib/egl/libGLESv2_fimg.so
+endif
 
 #
 # Keys
