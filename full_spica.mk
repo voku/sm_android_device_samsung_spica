@@ -64,11 +64,7 @@ PRODUCT_COPY_FILES += \
 # Display (3D)
 #
 PRODUCT_COPY_FILES += \
-    device/samsung/spica/prebuilt/spica/fimg-libs/egl.cfg:system/lib/egl/egl.cfg \
-    device/samsung/spica/prebuilt/spica/fimg-libs/libChunkAlloc.so:system/lib/egl/libChunkAlloc.so \
-    device/samsung/spica/prebuilt/spica/fimg-libs/libEGL_fimg.so:system/lib/egl/libEGL_fimg.so \
-    device/samsung/spica/prebuilt/spica/fimg-libs/libGLESv1_CM_fimg.so:system/lib/egl/libGLESv1_CM_fimg.so \
-    device/samsung/spica/prebuilt/spica/fimg-libs/libGLESv2_fimg.so:system/lib/egl/libGLESv2_fimg.so
+    device/samsung/spica/prebuilt/spica/fimg-libs/egl.cfg:system/lib/egl/egl.cfg
 
 #
 # 3D GFX
@@ -91,6 +87,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/3dpack/egl/libEGL_fimg.so:system/lib/egl/libEGL_fimg.so \
     device/samsung/spica/prebuilt/spica/3dpack/egl/libGLESv1_CM_fimg.so:system/lib/egl/libGLESv1_CM_fimg.so \
     device/samsung/spica/prebuilt/spica/3dpack/egl/libGLESv2_fimg.so:system/lib/egl/libGLESv2_fimg.so
+else
+PRODUCT_COPY_FILES += \
+    device/samsung/spica/prebuilt/spica/fimg-libs/libChunkAlloc.so:system/lib/egl/libChunkAlloc.so \
+    device/samsung/spica/prebuilt/spica/fimg-libs/libEGL_fimg.so:system/lib/egl/libEGL_fimg.so \
+    device/samsung/spica/prebuilt/spica/fimg-libs/libGLESv1_CM_fimg.so:system/lib/egl/libGLESv1_CM_fimg.so \
+    device/samsung/spica/prebuilt/spica/fimg-libs/libGLESv2_fimg.so:system/lib/egl/libGLESv2_fimg.so
 endif
 
 #
