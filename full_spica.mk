@@ -154,6 +154,12 @@ PRODUCT_COPY_FILES += \
     device/samsung/spica/prebuilt/spica/rockplayer/RockPlayer.apk:system/app/RockPlayer.apk
 
 #
+# dirty hack for OpenVPN
+#
+PRODUCT_COPY_FILES += \
+    device/samsung/spica/prebuilt/spica/vpn/openvpn.apk:system/app/OpenVPN.apk
+
+#
 # serviceModeApp
 #
 PRODUCT_COPY_FILES += \
