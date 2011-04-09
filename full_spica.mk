@@ -153,7 +153,10 @@ PRODUCT_COPY_FILES += \
 # RockPlayer for temporary DivX
 #
 PRODUCT_COPY_FILES += \
-    device/samsung/spica/prebuilt/spica/rockplayer/RockPlayer.apk:system/app/RockPlayer.apk
+    device/samsung/spica/prebuilt/spica/rockplayer/RockPlayer.apk:system/app/RockPlayer.apk \
+    device/samsung/spica/prebuilt/spica/rockplayer/libcmplayer.so:system/bin/rockplayer/libcmplayer.so \
+    device/samsung/spica/prebuilt/spica/rockplayer/libcmplayer_7.so:system/bin/rockplayer/libcmplayer_7.so \
+    device/samsung/spica/prebuilt/spica/rockplayer/libffmpeg.so:system/bin/rockplayer/libffmpeg.so
 
 #
 # dirty hack for OpenVPN
